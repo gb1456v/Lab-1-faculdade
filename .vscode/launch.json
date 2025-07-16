@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/gabri/OneDrive/Documentos/Material-da-faculdade/1-Semestre/Lab-1/Lab-1-faculdade/Exercicios/aula-1",
+      "program": "c:/Users/gabri/OneDrive/Documentos/Material-da-faculdade/1-Semestre/Lab-1/Lab-1-faculdade/Exercicios/aula-1/build/Release/outRelease",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
