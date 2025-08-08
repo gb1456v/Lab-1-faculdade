@@ -1,5 +1,5 @@
 #include <stdio.h>
 
 int main() {
-    printf("Gabriel\ndo\nCarmo\nVieira");
+    printf("Gabriel\ndo\nCarmo\nVieira\n");
 }
