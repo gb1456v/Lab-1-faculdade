@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/Lab-1-faculdade/aula-07.08/Exercicios/slide-02",
-      "program": "/workspaces/Lab-1-faculdade/aula-07.08/Exercicios/slide-02/build/Debug/outDebug",
+      "cwd": "/workspaces/Lab-1-faculdade/aula 12.08/Exercicios",
+      "program": "/workspaces/Lab-1-faculdade/aula 12.08/Exercicios/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
