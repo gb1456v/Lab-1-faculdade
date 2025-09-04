@@ -14,5 +14,5 @@ int main() {
     // 51025 / 1000 = 510
     //510 % 100 = resto 10
     ano = (data % 1000);
-    printf("O dia e %d, o mes e %d e o ano e %d",dia, mes,)
+    printf("O dia e %d, o mes e %d e o ano e %d",dia, mes, ano);
 }
