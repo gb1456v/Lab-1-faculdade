@@ -20,5 +20,5 @@ int main() {
     printf("O faturamento anual da empresa e de %.2f reais\n", faturamento_anual);
     printf("O valor ganho com multas por mes é de %.2f reais\n", total_multas_mes);
     printf("O total de carros ao final do ano será de %d carros \n", total_carros_fim_ano);
-
+    return 0;
 }
