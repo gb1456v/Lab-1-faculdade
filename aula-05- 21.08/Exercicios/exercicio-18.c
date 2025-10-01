@@ -5,8 +5,10 @@ int main()
     // Preços fixos para latas e galões
     const float PRECO_LATA = 80.0;
     const float PRECO_GALAO = 25.0;
+    const int volume_lata = 18;
+    const float volume_galao = 3.6;
 
-    float preco_apenas_latas, preco_apenas_galoes, preco_mistura, litros_necessarios, resto;
+    float preco_apenas_latas, preco_apenas_galoes, preco_mistura, litros_necessarios, restante_tinta;
     int qtd_galao, qtd_lata, tam_area, qtd_galao_mistura, qtd_lata_mistura;
 
     // entrada
@@ -17,23 +19,16 @@ int main()
     litros_necessarios = tam_area / 6.0;
     printf("\nLitros necessários: %.2f\n\n", litros_necessarios);
 
-    // --- Situação 1: Comprar apenas latas de 18 litros ---
-    qtd_lata = (int)ceil(litros_necessarios / 18.0);
-    preco_apenas_latas = qtd_lata * PRECO_LATA;
-    printf("Situação 1 (apenas latas de 18L):\n");
-    printf("Comprar %d lata(s), totalizando R$ %.2f\n\n", qtd_lata, preco_apenas_latas);
+    // Situação 1 - comprar apenas latas
 
-    // --- Situação 2: Comprar apenas galões de 3.6 litros ---
-    qtd_galao = (int)ceil(litros_necessarios / 3.6);
+    qtd_lata = ceil(litros_necessarios / volume_lata);
+    preco_apenas_latas = PRECO_LATA * qtd_lata;
+    printf("A quantidade de latas necessárias para esta área é %d e o valor gasto para pintar esta área é %d", qtd_lata, preco_apenas_latas);
+    // Situação 2 - comprar apenas galões
+    qtd_galao = ceil(litros_necessarios / volume_galao);
     preco_apenas_galoes = qtd_galao * PRECO_GALAO;
-    printf("Situação 2 (apenas galões de 3.6L):\n");
-    printf("Comprar %d galão(ões), totalizando R$ %.2f\n\n", qtd_galao, preco_apenas_galoes);
-
-    // --- Situação 3: Misturar latas e galões para melhor preço ---
-    qtd_lata_mistura = (int)(litros_necessarios / 18.0);
-    resto = litros_necessarios - (qtd_lata_mistura * 18.0);
-    qtd_galao_mistura = (int)ceil(resto / 3.6);
-    preco_mistura = (qtd_lata_mistura * PRECO_LATA) + (qtd_galao_mistura * PRECO_GALAO);
-    printf("Situação 3 (mistura otimizada):\n");
-    printf("Comprar %d lata(s) e %d galão(ões), totalizando R$ %.2f\n", qtd_lata_mistura, qtd_galao_mistura, preco_mistura);
+    printf("O total de galões necessários é %d e o valor estimado para pintar esta área é %d", qtd_galao, preco_apenas_galoes);
+    // Situação 3 - Misturar galões e latas para não haver desperdício
+    qtd_lata_mistura = ceil(litros_necessarios / volume_lata);
+    restante_tinta =
 }
