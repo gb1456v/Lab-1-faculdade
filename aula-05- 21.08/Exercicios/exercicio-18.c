@@ -5,7 +5,7 @@ int main()
     // Preços fixos para latas e galões
     const float PRECO_LATA = 80.0;
     const float PRECO_GALAO = 25.0;
-    const int volume_lata = 18;
+    const float volume_lata = 18.0;
     const float volume_galao = 3.6;
 
     float preco_apenas_latas, preco_apenas_galoes, preco_mistura, litros_necessarios, restante_tinta;
@@ -23,12 +23,20 @@ int main()
 
     qtd_lata = ceil(litros_necessarios / volume_lata);
     preco_apenas_latas = PRECO_LATA * qtd_lata;
-    printf("A quantidade de latas necessárias para esta área é %d e o valor gasto para pintar esta área é %d", qtd_lata, preco_apenas_latas);
+
     // Situação 2 - comprar apenas galões
     qtd_galao = ceil(litros_necessarios / volume_galao);
     preco_apenas_galoes = qtd_galao * PRECO_GALAO;
-    printf("O total de galões necessários é %d e o valor estimado para pintar esta área é %d", qtd_galao, preco_apenas_galoes);
+
     // Situação 3 - Misturar galões e latas para não haver desperdício
-    qtd_lata_mistura = ceil(litros_necessarios / volume_lata);
-    restante_tinta =
+    qtd_lata_mistura = (int)(litros_necessarios / volume_lata); // as latas são mais baratas
+    restante_tinta = litros_necessarios - qtd_lata_mistura * volume_lata;
+    qtd_galao_mistura = ceil(restante_tinta / volume_galao);
+    preco_mistura = ((qtd_galao_mistura * PRECO_GALAO) + (qtd_lata_mistura * PRECO_LATA));
+
+    printf("Situação 1 (apenas latas): Você precisará de %d lata(s), custando R$ %.2f\n", qtd_lata, preco_apenas_latas);
+    printf("Situação 2 (apenas galões): Você precisará de %d galão(ões), custando R$ %.2f\n", qtd_galao, preco_apenas_galoes);
+    printf("Situação 3 (misturado para economizar): Você precisará de %d lata(s) e %d galão(ões), custando R$ %.2f\n", qtd_lata_mistura, qtd_galao_mistura, preco_mistura);
+
+    return 0;
 }
